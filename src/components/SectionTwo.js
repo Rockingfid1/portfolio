@@ -78,7 +78,7 @@ export default function SectionTwo() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1.2 }}
           transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
-          href={`mailTo: omfugo2006@gmail.com?subject=dummy subject&body=dummy body`}
+          href="mailTo: omfugo2006@gmail.com"
           className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-3xl"
         >
           Email Me
