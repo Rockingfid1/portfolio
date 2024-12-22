@@ -1,5 +1,5 @@
 import logo from "../assets/images/reminder-app-logo.png";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import IconMenu from "./icons/MenuIcon";
 import IconCancel from "./icons/MenuCancel";
 import { useContext } from "react";
@@ -18,7 +18,6 @@ export default function Header() {
       <span className="flex flex-row items-center gap-3">
         <motion.img
           src={logo}
-          alt="header logo"
           className="w-[10%] shadow-black"
           initial={{ rotate: "-12deg" }}
           whileHover={{ rotate: "55deg", scale: 1.3 }}

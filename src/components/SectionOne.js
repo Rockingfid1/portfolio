@@ -56,7 +56,7 @@ export default function SectionOne() {
             About Me
           </motion.button>
         </div>
-        <img src={devImage} alt="developer image" className="w-[45%] m-auto" />
+        <img src={devImage} alt="developer" className="w-[45%] m-auto" />
       </motion.div>
     </section>
   );
