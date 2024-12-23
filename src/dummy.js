@@ -82,7 +82,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/tic-tac-toe.png"),
     name: "React Tic-Tac-Toe",
     description:
-      "Play a simple game of tic-tac-toe build with React.js and Vite.",
+      "Play a simple game of tic-tac-toe built with React.js and Vite.",
   },
   {
     url: "https://project-reminder.netlify.app/",
