@@ -27,7 +27,7 @@ export default function Header() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="text-lg sm:text-2xl md:text-2xl lg:text-4xl lp:text-2xl text-white font-medium"
+          className="text-lg sm:text-xl md:text-xl lg:text-4xl lp:text-2xl text-white font-medium"
         >
           Michaelfrank Okoye
         </motion.p>
