@@ -18,7 +18,7 @@ export default function Header() {
       <span className="flex flex-row items-center gap-3">
         <motion.img
           src={logo}
-          className="w-[20%] 2xl:w-[10%] lp:w-[7%] md:w-[15%] shadow-black"
+          className="w-[20%] 2xl:w-[10%] lp:w-[7%] md:w-[11%] shadow-black"
           initial={{ rotate: "-12deg" }}
           whileHover={{ rotate: "55deg", scale: 1.3 }}
           transition={{ duration: 0.3 }}
