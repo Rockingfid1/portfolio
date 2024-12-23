@@ -11,14 +11,14 @@ export default function Header() {
   return (
     <motion.nav
       animate={{ y: [1, 2, 0] }}
-      className={`flex z-50 flex-row bg-black py-4 px-5 gap-16 bg-opacity-40 justify-between ${
+      className={`flex z-50 flex-row bg-black py-4 px-5 gap-16 bg-opacity-40 justify-between lp:pr-16 ${
         modalCtx.shouldStick && "fixed w-screen"
       }`}
     >
       <span className="flex flex-row items-center gap-3">
         <motion.img
           src={logo}
-          className="w-[20%] shadow-black"
+          className="w-[20%] 2xl:w-[10%] lp:w-[7%] shadow-black"
           initial={{ rotate: "-12deg" }}
           whileHover={{ rotate: "55deg", scale: 1.3 }}
           transition={{ duration: 0.3 }}
@@ -27,7 +27,7 @@ export default function Header() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-medium"
+          className="text-lg sm:text-2xl md:text-3xl lg:text-4xl lp:text-2xl text-white font-medium"
         >
           Michaelfrank Okoye
         </motion.p>

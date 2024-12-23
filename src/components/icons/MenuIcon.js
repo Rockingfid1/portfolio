@@ -15,7 +15,7 @@ function IconMenu(props) {
       <motion.svg
         viewBox="0 0 1024 1024"
         fill="currentColor"
-        className="w-[220%] md:w-[100%] sm:w-[100%]"
+        className="w-[170%] sm:w-[175%] md:w-[180%] lp:w-[70%]"
         height="4em"
         width="4em"
         {...props}

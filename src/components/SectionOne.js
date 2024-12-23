@@ -39,12 +39,12 @@ export default function SectionOne() {
         animate={{ opacity: 1, y: [1, 4, 1] }}
         transition={{ duration: 0.7 }}
       >
-        <div className="text-white text-center m-auto flex flex-col gap-5 items-start xl:gap-8 p-4">
+        <div className="text-white text-center m-auto flex flex-col gap-5 items-start lg:gap-10 lp:gap-8 xl:gap-12 p-4">
           <span>
-            <h1 className="font-semibold text-2xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl mb-1 flex flex-row gap-2">
+            <h1 className="font-semibold text-2xl sm:text-5xl md:text-7xl lg:text-7xl lp:text-5xl mb-1 sm:mb-2 md:mb-3 lg:mb-4 flex flex-row gap-2">
               Frontend <p className="text-green-500">Developer</p>
             </h1>
-            <p className="xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-lg flex flex-row gap-3">
+            <p className="lp:text-2xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-lg flex flex-row gap-3">
               Resilient
               <span className=" text-green-500">.</span>
               Determined
@@ -55,13 +55,17 @@ export default function SectionOne() {
           <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.3, stiffness: 500, type: "spring" }}
-            className="bg-green-500 rounded-lg max-w-fit py-3 px-5 xl:text-5xl xl:pb-5 lg:pb-5 lg:text-4xl md:pb-5 md:text-3xl sm:pb-4 sm:text-2xl text-lg text-white items-center"
+            className="bg-green-500 rounded-lg max-w-fit py-3 px-5 xl:text-5xl xl:pb-5 lp:text-2xl lp:py-3 lg:pb-5 lg:text-4xl md:pb-5 md:text-3xl sm:pb-4 sm:text-2xl text-lg text-white items-center"
             onClick={handleAboutClick}
           >
             About Me
           </motion.button>
         </div>
-        <img src={devImage} alt="developer" className="m-auto w-[60%]" />
+        <img
+          src={devImage}
+          alt="developer"
+          className="m-auto w-[60%] 2xl:w-[40%] lp:w-[30%]"
+        />
       </motion.div>
     </section>
   );

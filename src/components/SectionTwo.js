@@ -30,7 +30,7 @@ export default function SectionTwo() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-3xl mb-10 font-semibold"
+        className="text-center text-3xl sm:text-4xl md:text-5xl mb-10 font-semibold lp:text-4xl"
       >
         About
       </motion.p>
@@ -40,7 +40,7 @@ export default function SectionTwo() {
         whileInView={{ opacity: 1, y: [1, 7, 1] }}
         className="flex flex-col items-center"
       >
-        <div className="flex flex-row text-base justify-center text-white relative gap-4 mb-3">
+        <div className="flex flex-row text-base sm:text-xl md:text-2xl xl:text-3xl lp:text-2xl justify-center text-white relative gap-4 sm:gap-5 md:gap-6 lp:gap-1 mb-3">
           <motion.button
             whileHover={{ scale: 1.1 }}
             onClick={() => handleButtonClick("infoTab", 0)}
@@ -69,7 +69,7 @@ export default function SectionTwo() {
             My Hobbies
           </motion.button>
         </div>
-        <div className="bg-slate-600 rounded-lg w-[100%] min-h-fit text-2xl m-auto p-14 text-white">
+        <div className="bg-slate-600 rounded-lg w-[100%] sm:w-[90%] md:w-[80%] lp:w-[50%] min-h-fit text-2xl lp:text-xl xl:text-3xl m-auto p-14 text-white">
           {tab.infoTab && <TabInfo info="info" />}
           {tab.goalTab && <TabInfo info="goal" />}
           {tab.hobbiesTab && <TabInfo info="hobbies" />}
@@ -79,7 +79,7 @@ export default function SectionTwo() {
           whileTap={{ scale: 1.2 }}
           transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
           href="mailTo: omfugo2006@gmail.com"
-          className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-xl"
+          className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-xl sm:text-2xl md:text-3xl xl:text-4xl lp:text-3xl"
         >
           Email Me
         </motion.a>

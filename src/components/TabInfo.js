@@ -17,7 +17,6 @@ export default function TabInfo({ info }) {
       <br />
       <br />
       <br />
-      <br />
     </p>
   ) : info === "goal" ? (
     <p>
@@ -33,6 +32,10 @@ export default function TabInfo({ info }) {
       <br />
       My goal is to have a very long career in the computer science industry and
       further increase my knowledge as the years progress
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
     </p>
