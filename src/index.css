@@ -18,17 +18,15 @@ code {
 
 .page-color {
   background-color: rgb(58, 64, 73);
-  font-family: "renogare";
 }
 .page-color-two {
-  font-family: "renogare";
   background-color: rgb(209, 227, 252);
 }
 
 .modal {
-  font-family: "renogare";
 }
 
+/*
 @font-face {
   font-family: "renogare";
   src: url("./assets/fonts/Renogare-Regular.otf") format("embedded-opentype"),
@@ -38,7 +36,7 @@ code {
     url("./assets/fonts/Renogare-Regular.otf") format("svg");
 }
 
-.lds-ring {
+ .lds-ring {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -75,6 +73,7 @@ code {
     transform: rotate(360deg);
   }
 }
+  */
 
 progress {
   border-radius: 100px;

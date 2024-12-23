@@ -30,7 +30,7 @@ export default function SectionTwo() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-6xl mb-24"
+        className="text-center text-6xl mb-24 font-medium"
       >
         About
       </motion.p>
