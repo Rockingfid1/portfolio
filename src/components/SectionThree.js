@@ -16,12 +16,12 @@ export default function SectionThree() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-6xl text-center p-36 text-white font-medium"
+        className="text-3xl text-center pt-10 text-white font-medium"
       >
         Projects
       </motion.p>
       <motion.ul
-        className="grid grid-rows-3 gap-8 "
+        className="grid grid-cols-1 gap-8 "
         variants={{
           visible: { transition: { staggerChildren: 0.05 } },
         }}

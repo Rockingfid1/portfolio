@@ -6,9 +6,7 @@ export default function Project({ image, name, url, description }) {
       initial={{ opacity: 0 }}
       whileInView={{ y: [4, 12, 10, 7, 1], opacity: 1 }}
       transition={{ duration: 0.45 }}
-      className={`border-4 border-opacity-20 border-black rounded-lg bg-zinc-800 w-4/12 text-white text-2xl flex flex-col items-center justify-center gap-10 m-auto pb-11 shadow-lg mt-24 -mb-11 ${
-        name === "Forkify"
-      } `}
+      className="border-4 border-opacity-20 border-black rounded-lg bg-zinc-800 w-[80%] text-white text-xl flex flex-col items-center justify-center gap-10 m-auto pb-11 shadow-lg mt-14 -mb-11"
     >
       <img
         src={image}
@@ -26,7 +24,7 @@ export default function Project({ image, name, url, description }) {
       <motion.a
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, type: "spring", stiffness: 500 }}
-        className="bg-green-500 py-3 px-7 rounded-lg text-4xl"
+        className="bg-green-500 py-2 px-5 rounded-lg text-xl"
         href={url}
       >
         {name}

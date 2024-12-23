@@ -28,7 +28,6 @@ export default function ModalContextProvider({ children }) {
   function headerObserver(entries) {
     const [entry] = entries;
     setShouldStick(!entry.isIntersecting);
-    console.log(shouldStick);
   }
 
   function handleMenuClick(click) {

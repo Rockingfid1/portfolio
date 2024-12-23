@@ -15,6 +15,7 @@ import nodejs from "./assets/images/nodejs.png";
 import photoshop from "./assets/images/photoshop.png";
 import ts from "./assets/images/TS.png";
 import reactImage from "./assets/images/React.png";
+import responsive from "./assets/images/responsive.png";
 
 function imageSwitch(imageUrl) {
   switch (imageUrl) {
@@ -54,6 +55,8 @@ function skillSwitch(skillImage) {
       return ts;
     case "images/react.png":
       return reactImage;
+    case "images/responsive.png":
+      return responsive;
     default:
       return photoshop;
   }
@@ -153,4 +156,5 @@ export const SKILLS_DATA = [
     name: "TypeScript",
     image: skillSwitch("images/TS.png"),
   },
+  { name: "Responsive Design", image: skillSwitch("images/responsive.png") },
 ];
