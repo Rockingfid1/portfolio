@@ -19,80 +19,79 @@ export default function MenuModal({ modalOpen }) {
   });
 
   return createPortal(
-    <>
-      <motion.dialog
-        animate={{ x: [2, 6, 1] }}
-        transition={{ duration: 0.5 }}
-        exit={{ x: [2, 6, 1] }}
-        ref={dialogRef}
-        className="w-screen p-16 max-h-screen text-white bg-gray-900 flex flex-col items-center justify-center backdrop:bg-black backdrop:opacity-70 shadow-xl"
+    <motion.dialog
+      animate={{ x: [2, 6, 1] }}
+      transition={{ duration: 0.5 }}
+      exit={{ x: [2, 6, 1] }}
+      ref={dialogRef}
+      className="w-screen p-16 max-h-screen text-white bg-gray-900 flex flex-col items-center justify-center backdrop:bg-black backdrop:opacity-70 shadow-xl"
+    >
+      {modalOpen && (
+        <div className="mt-10">
+          <IconCancel />
+        </div>
+      )}
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="flex flex-col gap-28 items-center"
       >
-        {modalOpen && <IconCancel />}
-        <motion.ul
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex flex-col gap-32 items-center"
+        <motion.li
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0.75 }}
+          transition={{ duration: 0.2, type: "" }}
+          className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
         >
-          <motion.li
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.75 }}
-            transition={{ duration: 0.2, type: "" }}
-            className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
+          <button onClick={() => modalCtx.handleRefClick(modalCtx.homeRef)}>
+            Home
+          </button>
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0.75 }}
+          transition={{ duration: 0.2, type: "" }}
+          className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
+        >
+          <button onClick={() => modalCtx.handleRefClick(modalCtx.aboutRef)}>
+            About
+          </button>
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0.75 }}
+          transition={{ duration: 0.2, type: "" }}
+          className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
+        >
+          <button onClick={() => modalCtx.handleRefClick(modalCtx.projectsRef)}>
+            Projects
+          </button>
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0.75 }}
+          transition={{ duration: 0.2, type: "" }}
+          className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
+        >
+          <button onClick={() => modalCtx.handleRefClick(modalCtx.skillsRef)}>
+            Skills
+          </button>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1.2 }}
+          transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
+        >
+          <a
+            href="mailTo: omfugo2006@gmail.com"
+            className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-sm sm:text-xl md:text-2xl lg:text-3xl"
           >
-            <button onClick={() => modalCtx.handleRefClick(modalCtx.homeRef)}>
-              Home
-            </button>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.75 }}
-            transition={{ duration: 0.2, type: "" }}
-            className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
-          >
-            <button onClick={() => modalCtx.handleRefClick(modalCtx.aboutRef)}>
-              About
-            </button>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.75 }}
-            transition={{ duration: 0.2, type: "" }}
-            className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
-          >
-            <button
-              onClick={() => modalCtx.handleRefClick(modalCtx.projectsRef)}
-            >
-              Projects
-            </button>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.75 }}
-            transition={{ duration: 0.2, type: "" }}
-            className="hover:text-red-500 sm:text-xl md:text-2xl lg:text-3xl"
-          >
-            <button onClick={() => modalCtx.handleRefClick(modalCtx.skillsRef)}>
-              Skills
-            </button>
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1.2 }}
-            transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
-          >
-            <a
-              href="mailTo: omfugo2006@gmail.com"
-              className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-sm sm:text-xl md:text-2xl lg:text-3xl"
-            >
-              Contact Me
-            </a>
-          </motion.li>
-        </motion.ul>
-      </motion.dialog>
-      <div className="bg-gray-900 p-16">T</div>
-    </>,
+            Contact Me
+          </a>
+        </motion.li>
+      </motion.ul>
+    </motion.dialog>,
     document.getElementById("root")
   );
 }
