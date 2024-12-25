@@ -68,42 +68,42 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/forkify-app.png"),
     name: "Forkify",
     description:
-      "An app that allows you to retrieve hundreds of recipes from a backend and add your own recipes as well.",
+      "An app that allows you to retrieve hundreds of recipes from a backend and add your own recipes as well. (Non-responsive)",
   },
   {
     url: "https://react-food-app-proj.netlify.app/",
     image: imageSwitch("images/food-order-app.png"),
     name: "React Food",
     description:
-      "An app that allows you to place food orders and send them to a backend to be processed using the fetch API.",
+      "An app that allows you to place food orders and send them to a backend to be processed using the fetch API. (Non-responsive)",
   },
   {
     url: "https://tic-tac-toe-app-michael.netlify.app/",
     image: imageSwitch("images/tic-tac-toe.png"),
     name: "React Tic-Tac-Toe",
     description:
-      "Play a simple game of tic-tac-toe built with React.js and Vite.",
+      "Play a simple game of tic-tac-toe built with React.js and Vite. (Partially Responsive)",
   },
   {
     url: "https://project-reminder.netlify.app/",
     image: imageSwitch("images/reminder-app-logo.png"),
     name: "Project Reminder App",
     description:
-      "A passion project of mine that allows you to set deadlines and tasks for a team/individual. My second project created 100% by me.",
+      "A passion project of mine that allows you to set deadlines and tasks for a team/individual. My second project created 100% by me. (Responsive)",
   },
   {
     url: "https://food-mpa.vercel.app/",
     image: imageSwitch("images/food-mpa-app.png"),
     name: "Next.js Food app",
     description:
-      "A multi-page application that allows individuals to share and view recipes within a community using a third-party backend API",
+      "A multi-page application that allows individuals to share and view recipes within a community using a third-party backend API. (Non-responsive)",
   },
   {
     url: "https://simple-meetup-application-nextjs.vercel.app/",
     image: imageSwitch("images/meetup-app.png"),
     name: "Meetup App",
     description:
-      "An app that allows you to retrieve hundreds of recipes from a backend and add your own recipes as well",
+      "An app that allows you to retrieve hundreds of recipes from a backend and add your own recipes as well. (Non-responsive)",
   },
 ];
 
