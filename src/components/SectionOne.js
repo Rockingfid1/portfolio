@@ -55,7 +55,7 @@ export default function SectionOne() {
           <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.3, stiffness: 500, type: "spring" }}
-            className="bg-green-500 rounded-lg max-w-fit py-3 px-5 xl:text-5xl xl:pb-5 lp:text-2xl lp:py-3 lg:pb-5 lg:text-4xl md:pb-3 md:text-xl sm:pb-4 sm:text-2xl text-lg text-white items-center"
+            className="bg-green-500 rounded-lg max-w-fit py-3 px-5 xl:text-5xl xl:pb-5 lp:text-2xl lp:py-3 lg:pb-5 lg:text-4xl md:pb-3 md:text-xl sm:pb-4 2md:pb-5 sm:text-2xl text-lg text-white items-center"
             onClick={handleAboutClick}
           >
             About Me
