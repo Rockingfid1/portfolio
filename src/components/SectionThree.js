@@ -10,7 +10,7 @@ export default function SectionThree() {
   return (
     <section
       ref={modalCtx.projectsRef}
-      className="w-screen h-fit page-color pb-20"
+      className="w-screen h-fit page-color pb-20 pt-10"
     >
       <motion.p
         initial={{ opacity: 0 }}

@@ -27,7 +27,7 @@ export default function SectionOne() {
   return (
     <section
       ref={modalCtx.homeRef}
-      className="page-color w-screen min-h-screen flex flex-col"
+      className="page-color w-screen min-h-screen flex flex-col border-b-8  border-opacity-75 border-gray-600"
     >
       <Header />
       <AnimatePresence>

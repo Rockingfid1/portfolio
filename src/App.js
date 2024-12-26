@@ -8,8 +8,8 @@ function App() {
   return (
     <ModalContextProvider>
       <SectionOne />
-      <SectionTwo />
       <SectionThree />
+      <SectionTwo />
       <Footer />
     </ModalContextProvider>
   );
