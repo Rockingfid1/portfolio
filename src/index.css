@@ -32,6 +32,7 @@ code {
     url("./assets/fonts/Renogare-Regular.otf") format("truetype"),
     url("./assets/fonts/Renogare-Regular.otf") format("svg");
 }
+      */
 
  .lds-ring {
   display: inline-block;
@@ -70,7 +71,7 @@ code {
     transform: rotate(360deg);
   }
 }
-  */
+
 
 progress {
   border-radius: 100px;
