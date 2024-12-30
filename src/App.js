@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ModalContextProvider from "./store/modal-context";
 import SectionOne from "./components/SectionOne";
 import SectionTwo from "./components/SectionTwo";
@@ -9,10 +9,15 @@ import LoadingPage from "./components/LoadingPage";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  window.addEventListener("load", () => {
-    setLoading(false);
-    console.log("page loaded");
-  });
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setLoading(false);
+      console.log("ready");
+    } else
+      window.addEventListener("load", () => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <ModalContextProvider>
