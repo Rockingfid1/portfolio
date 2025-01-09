@@ -4,6 +4,7 @@ import foodMpa from "./assets/images/food-mpa.png";
 import meetupApp from "./assets/images/meetup-app.png";
 import reminderAppLogo from "./assets/images/reminder-app-logo.png";
 import ticTacToe from "./assets/images/tic-tac-toe.png";
+import thspian from "./assets/images/thspian.png";
 
 import html from "./assets/images/html.png";
 import css from "./assets/images/css.png";
@@ -29,6 +30,8 @@ function imageSwitch(imageUrl) {
       return meetupApp;
     case "images/reminder-app-logo.png":
       return reminderAppLogo;
+    case "images/thspian.png":
+      return thspian;
 
     default:
       return ticTacToe;
@@ -63,6 +66,13 @@ function skillSwitch(skillImage) {
 }
 
 export const DUMMY_DATA = [
+  {
+    url: "https://www.thspian.com/discovery",
+    image: imageSwitch("images/thspian.png"),
+    name: "Thspian",
+    description:
+      "A social media platform that allows content creators from all over the world to interact with eachother and share their content.",
+  },
   {
     url: "https://forkify-michaelfrank.netlify.app/",
     image: imageSwitch("images/forkify-app.png"),
