@@ -113,7 +113,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/meetup-app.png"),
     name: "Meetup App",
     description:
-      "An app that allows you to retrieve hundreds of recipes from a backend and add your own recipes as well. (Non-responsive)",
+      "An app that allows you to retrieve hundreds of recipes from a backend and add personal recipes as well. (Non-responsive)",
   },
 ];
 
