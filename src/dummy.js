@@ -141,17 +141,17 @@ export const SKILLS_DATA = [
   {
     name: "Framer Motion",
     image: skillSwitch("images/framer.png"),
-    value: 60,
+    value: 85,
   },
   {
     name: "Next.js",
     image: skillSwitch("images/next.png"),
-    value: 80,
+    value: 85,
   },
   {
     name: "Node.js",
     image: skillSwitch("images/node.png"),
-    value: 40,
+    value: 85,
   },
   {
     name: "Photoshop",
