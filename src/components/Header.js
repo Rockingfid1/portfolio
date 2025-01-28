@@ -23,14 +23,16 @@ export default function Header() {
           whileHover={{ rotate: "55deg", scale: 1.3 }}
           transition={{ duration: 0.3 }}
         />
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7 }}
-          className="text-lg sm:text-xl md:text-xl lg:text-4xl lp:text-2xl text-white font-medium"
-        >
-          Michaelfrank Okoye
-        </motion.p>
+        {!modalCtx.shouldStick && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            className="text-lg sm:text-xl md:text-xl lg:text-4xl lp:text-2xl text-white font-medium"
+          >
+            Michaelfrank Okoye
+          </motion.p>
+        )}
       </span>
       <AnimatePresence>{!modalCtx.menuClick && <IconMenu />}</AnimatePresence>
       <AnimatePresence>{modalCtx.menuClick && <IconCancel />}</AnimatePresence>
