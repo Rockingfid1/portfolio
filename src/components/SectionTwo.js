@@ -10,15 +10,14 @@ export default function SectionTwo() {
     infoTab: true,
     goalTab: false,
     hobbiesTab: false,
-    index: 0,
   });
 
-  function handleButtonClick(tab, index) {
+  function handleButtonClick(tab) {
     if (tab === "infoTab") {
-      setTab({ infoTab: true, goalTab: false, hobbiesTab: false, index });
+      setTab({ infoTab: true, goalTab: false, hobbiesTab: false });
     } else if (tab === "goalTab") {
-      setTab({ infoTab: false, goalTab: true, hobbiesTab: false, index });
-    } else setTab({ infoTab: false, goalTab: false, hobbiesTab: true, index });
+      setTab({ infoTab: false, goalTab: true, hobbiesTab: false });
+    } else setTab({ infoTab: false, goalTab: false, hobbiesTab: true });
   }
 
   return (
@@ -43,7 +42,7 @@ export default function SectionTwo() {
         <div className="flex flex-row text-base sm:text-xl md:text-2xl xl:text-3xl lp:text-2xl justify-center text-white relative gap-4 sm:gap-5 md:gap-6 lp:gap-1 mb-3">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            onClick={() => handleButtonClick("infoTab", 0)}
+            onClick={() => handleButtonClick("infoTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.infoTab ? "bg-black" : "bg-green-500"
             }`}
@@ -52,7 +51,7 @@ export default function SectionTwo() {
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
-            onClick={() => handleButtonClick("goalTab", 1)}
+            onClick={() => handleButtonClick("goalTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.goalTab ? "bg-black" : "bg-green-500"
             }`}
@@ -61,7 +60,7 @@ export default function SectionTwo() {
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
-            onClick={() => handleButtonClick("hobbiesTab", 2)}
+            onClick={() => handleButtonClick("hobbiesTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.hobbiesTab ? "bg-black" : "bg-green-500"
             }`}

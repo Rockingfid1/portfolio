@@ -10,13 +10,16 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (document.readyState === "complete") {
-      setLoading(false);
-      console.log("ready");
-    } else
-      window.addEventListener("load", () => {
+    setTimeout(() => {
+      if (document.readyState === "complete") {
         setLoading(false);
-      });
+        console.log("ready");
+      } else {
+        window.addEventListener("load", () => {
+          setLoading(false);
+        });
+      }
+    }, 2000);
   }, []);
 
   return (
