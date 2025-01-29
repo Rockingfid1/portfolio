@@ -102,7 +102,7 @@ export const DUMMY_DATA = [
       "A passion project of mine that allows you to set deadlines and tasks for a team/individual. My second project created 100% by me. (Responsive)",
   },
   {
-    url: "https://food-mpa.netlify.app/",
+    url: "https://food-mpa.vercel.app/",
     image: imageSwitch("images/food-mpa-app.png"),
     name: "Next.js Food app",
     description:
