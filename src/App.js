@@ -13,7 +13,6 @@ function App() {
     setTimeout(() => {
       if (document.readyState === "complete") {
         setLoading(false);
-        console.log("ready");
       } else {
         window.addEventListener("load", () => {
           setLoading(false);
