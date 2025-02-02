@@ -14,10 +14,6 @@ export default function MenuModal({ modalOpen }) {
     } else dialogRef.current.close();
   }, [modalOpen]);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") modalCtx.closeModal();
-  });
-
   return createPortal(
     <motion.dialog
       animate={{ x: [2, 6, 1] }}
