@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { useEffect, useRef, useContext } from "react";
 import { ModalContext } from "../store/modal-context";
 import IconCancel from "./icons/MenuCancel";
