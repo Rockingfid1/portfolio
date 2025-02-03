@@ -1,8 +1,8 @@
-import { createPortal } from "react-dom";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useRef, useContext } from "react";
 import { ModalContext } from "../store/modal-context";
 import IconCancel from "./icons/MenuCancel";
+import { createPortal } from "react-dom";
 
 export default function MenuModal({ modalOpen }) {
   const modalCtx = useContext(ModalContext);
@@ -14,25 +14,27 @@ export default function MenuModal({ modalOpen }) {
     } else dialogRef.current.close();
   }, [modalOpen]);
 
+  function handleClose(event) {
+    if (event.key === "Escape") modalCtx.handleMenuClick();
+  }
+
   return createPortal(
     <motion.dialog
       animate={{ x: [2, 6, 1] }}
       transition={{ duration: 0.5 }}
       exit={{ x: [2, 6, 1] }}
       ref={dialogRef}
-      className="w-screen sm:py-36 lp:pt-0 lp:pb-16 p-16 max-h-screen text-white bg-gray-900 flex flex-col items-center justify-center backdrop:bg-black backdrop:opacity-70 shadow-xl lp:w-[30%] lp:left-[70%] 2md:pb-10 "
+      onKeyDown={handleClose}
+      className="w-screen flex flex-col items-center justify-center sm:py-36 lp:pt-0 lp:pb-16 p-16 min-h-screen text-white bg-gray-900  backdrop:bg-black backdrop:opacity-70 shadow-xl lp:w-[30%] lp:left-[70%] 2md:pb-10 "
     >
-      {modalOpen && (
-        <div className="mt-10">
-          <IconCancel />
-        </div>
-      )}
+      <IconCancel height="5em" width="5em" />
+
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="flex flex-col gap-28 sm:gap-36 sm:mt-5 items-center 2md:gap-32"
+        className="flex flex-col gap-24 sm:gap-36 items-center 2md:gap-32"
       >
         <motion.li
           initial={{ opacity: 1 }}
@@ -88,6 +90,6 @@ export default function MenuModal({ modalOpen }) {
         </motion.li>
       </motion.ul>
     </motion.dialog>,
-    document.getElementById("root")
+    document.getElementById("modal")
   );
 }

@@ -1,12 +1,23 @@
 import logo from "../assets/images/reminder-app-logo.png";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import IconMenu from "./icons/MenuIcon";
-import IconCancel from "./icons/MenuCancel";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../store/modal-context";
 
 export default function Header() {
+  const [innerWidth, setInnerWidth] = useState();
   const modalCtx = useContext(ModalContext);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setInnerWidth(window.innerWidth);
+    });
+
+    return () =>
+      window.removeEventListener("resize", () => {
+        setInnerWidth(window.innerWidth);
+      });
+  }, []);
 
   return (
     <motion.nav
@@ -18,9 +29,9 @@ export default function Header() {
       <span className="flex flex-row items-center gap-3">
         <motion.img
           src={logo}
-          className="w-[20%] 2xl:w-[10%] lp:w-[7%] md:w-[11%] shadow-black"
+          className="w-[15%] 2xl:w-[10%] lp:w-[7%] md:w-[11%] shadow-black"
           initial={{ rotate: "-12deg" }}
-          whileHover={{ rotate: "55deg", scale: 1.3 }}
+          whileHover={{ rotate: "55deg", scale: 1.1 }}
           transition={{ duration: 0.3 }}
         />
         {!modalCtx.shouldStick && (
@@ -34,8 +45,13 @@ export default function Header() {
           </motion.p>
         )}
       </span>
-      <AnimatePresence>{!modalCtx.menuClick && <IconMenu />}</AnimatePresence>
-      <AnimatePresence>{modalCtx.menuClick && <IconCancel />}</AnimatePresence>
+
+      {!modalCtx.menuClick && (
+        <IconMenu
+          height={innerWidth < 800 ? "6.5em" : "4em"}
+          width={innerWidth < 800 ? "6.5em" : "4em"}
+        />
+      )}
     </motion.nav>
   );
 }

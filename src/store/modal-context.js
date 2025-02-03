@@ -5,11 +5,8 @@ export const ModalContext = createContext({
   aboutRef: null,
   skillsRef: null,
   projectsRef: null,
-  modalOpen: null,
-  menuClick: null,
-  shouldStick: null,
-  handleModal() {},
-  closeModal() {},
+  menuClick: false,
+  shouldStick: false,
   handleMenuClick() {},
   handleRefClick() {},
   headerObserver() {},
@@ -21,7 +18,6 @@ export default function ModalContextProvider({ children }) {
   const projectsRef = useRef();
   const skillsRef = useRef();
 
-  const [modalOpen, setModalOpen] = useState(false);
   const [menuClick, setMenuClick] = useState(false);
   const [shouldStick, setShouldStick] = useState(false);
 
@@ -30,26 +26,13 @@ export default function ModalContextProvider({ children }) {
     setShouldStick(!entry.isIntersecting);
   }
 
-  function handleMenuClick(click) {
+  function handleMenuClick() {
     setMenuClick((prevClick) => !prevClick);
-
-    handleModal(click);
   }
 
   function handleRefClick(ref) {
     ref.current.scrollIntoView({ behavior: "smooth" });
-
-    closeModal();
-  }
-
-  function handleModal(click) {
-    if (click) setModalOpen(true);
-    else setModalOpen(false);
-  }
-
-  function closeModal() {
-    setModalOpen(false);
-    setMenuClick(false);
+    handleMenuClick();
   }
 
   const modalCtxValue = {
@@ -57,14 +40,11 @@ export default function ModalContextProvider({ children }) {
     aboutRef,
     projectsRef,
     skillsRef,
-    modalOpen,
-    handleModal,
-    closeModal,
     menuClick,
+    shouldStick,
     handleMenuClick,
     handleRefClick,
     headerObserver,
-    shouldStick,
   };
   return (
     <ModalContext.Provider value={modalCtxValue}>

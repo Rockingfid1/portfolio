@@ -1,22 +1,34 @@
 import { motion } from "motion/react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../store/modal-context";
 
 function IconCancel(props) {
+  const [innerWidth, setInnerWidth] = useState();
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
+
+    return () =>
+      window.removeEventListener("resize", () =>
+        setInnerWidth(window.innerWidth)
+      );
+  });
+
   const modalCtx = useContext(ModalContext);
   return (
     <motion.button
-      className="text-white z-100 mb-20"
+      className={`text-white ${innerWidth < 800 ? "mb-14" : "mb-20"}`}
       animate={{ rotate: 180 }}
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 400, duration: 0.45 }}
-      onClick={() => modalCtx.handleMenuClick(false)}
+      onClick={() => modalCtx.handleMenuClick()}
     >
       <motion.svg
         viewBox="0 0 470 1000"
         fill="currentColor"
-        height="4.5em"
-        width="4.5em"
+        className="w-[100%] h-[100%]"
+        height="8em"
+        width="8em"
         exit={{ rotate: 360 }}
         transition={{ duration: 0.45 }}
         {...props}
