@@ -48,8 +48,8 @@ export default function Header() {
 
       {!modalCtx.menuClick && (
         <IconMenu
-          height={innerWidth < 800 ? "6.5em" : "4em"}
-          width={innerWidth < 800 ? "6.5em" : "4em"}
+          height={innerWidth < 800 ? "6.5em" : "3em"}
+          width={innerWidth < 800 ? "6.5em" : "3em"}
         />
       )}
     </motion.nav>
