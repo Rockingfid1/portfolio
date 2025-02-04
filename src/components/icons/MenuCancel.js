@@ -3,21 +3,18 @@ import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../store/modal-context";
 
 function IconCancel(props) {
-  const [innerWidth, setInnerWidth] = useState();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
-
-    return () =>
-      window.removeEventListener("resize", () =>
-        setInnerWidth(window.innerWidth)
-      );
-  });
+  }, []);
 
   const modalCtx = useContext(ModalContext);
   return (
     <motion.button
-      className={`text-white ${innerWidth < 800 ? "mb-14" : "mb-20"}`}
+      className={`text-white ${
+        innerWidth <= 400 ? "mb-10" : innerWidth < 800 ? "mb-14" : "mb-20"
+      }`}
       animate={{ rotate: 180 }}
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 400, duration: 0.45 }}
@@ -27,8 +24,8 @@ function IconCancel(props) {
         viewBox="0 0 470 1000"
         fill="currentColor"
         className="w-[100%] h-[100%]"
-        height="8em"
-        width="8em"
+        height="6em"
+        width="6em"
         exit={{ rotate: 360 }}
         transition={{ duration: 0.45 }}
         {...props}

@@ -5,19 +5,13 @@ import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../store/modal-context";
 
 export default function Header() {
-  const [innerWidth, setInnerWidth] = useState();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const modalCtx = useContext(ModalContext);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setInnerWidth(window.innerWidth);
-    });
-
-    return () =>
-      window.removeEventListener("resize", () => {
-        setInnerWidth(window.innerWidth);
-      });
+    window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
   }, []);
+  console.log(innerWidth);
 
   return (
     <motion.nav
@@ -48,8 +42,24 @@ export default function Header() {
 
       {!modalCtx.menuClick && (
         <IconMenu
-          height={innerWidth < 800 ? "6.5em" : "3em"}
-          width={innerWidth < 800 ? "6.5em" : "3em"}
+          height={
+            innerWidth < 800 && innerWidth > 400
+              ? "6.5em"
+              : innerWidth <= 400
+              ? "8em"
+              : innerWidth <= 1200
+              ? "5em"
+              : "3em"
+          }
+          width={
+            innerWidth < 800 && innerWidth > 400
+              ? "6.5em"
+              : innerWidth <= 400
+              ? "8em"
+              : innerWidth <= 1200
+              ? "5em"
+              : "3em"
+          }
         />
       )}
     </motion.nav>

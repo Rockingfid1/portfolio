@@ -27,7 +27,7 @@ export default function MenuModal({ modalOpen }) {
       onKeyDown={handleClose}
       className="w-screen flex flex-col items-center justify-center sm:py-36 lp:pt-0 lp:pb-16 p-16 min-h-screen text-white bg-gray-900  backdrop:bg-black backdrop:opacity-70 shadow-xl lp:w-[30%] lp:left-[70%] 2md:pb-10 "
     >
-      <IconCancel height="5em" width="5em" />
+      <IconCancel height="4.5em" width="4.5em" />
 
       <motion.ul
         initial={{ opacity: 0 }}
