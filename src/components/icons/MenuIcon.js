@@ -8,7 +8,7 @@ function IconMenu(props) {
     <motion.button
       className="text-white mr-2 h-fit w-fit m-auto"
       animate={{ rotate: 180 }}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, duration: 0.4 }}
       onClick={() => modalCtx.handleMenuClick()}
     >

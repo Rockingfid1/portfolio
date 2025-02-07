@@ -10,13 +10,17 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
+
+    return () =>
+      window.removeEventListener("resize", () =>
+        setInnerWidth(window.innerWidth)
+      );
   }, []);
-  console.log(innerWidth);
 
   return (
     <motion.nav
       animate={{ y: [1, 2, 0] }}
-      className={`flex z-50 flex-row bg-black py-4 px-5 gap-16 bg-opacity-40 justify-between lp:pr-16 ${
+      className={`flex z-50 flex-row bg-black py-4 md:py-2 px-5 gap-16 bg-opacity-40 justify-between lp:pr-16 ${
         modalCtx.shouldStick && "fixed w-screen"
       }`}
     >
@@ -25,7 +29,7 @@ export default function Header() {
           src={logo}
           className="w-[15%] 2xl:w-[10%] lp:w-[7%] md:w-[11%] shadow-black"
           initial={{ rotate: "-12deg" }}
-          whileHover={{ rotate: "55deg", scale: 1.1 }}
+          whileHover={{ rotate: "55deg", scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
         {!modalCtx.shouldStick && (
@@ -33,7 +37,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-lg sm:text-xl md:text-xl lg:text-4xl lp:text-2xl text-white font-medium"
+            className="text-lg sm:text-xl text-white font-medium"
           >
             Michaelfrank Okoye
           </motion.p>
@@ -47,18 +51,14 @@ export default function Header() {
               ? "6.5em"
               : innerWidth <= 400
               ? "8em"
-              : innerWidth <= 1200
-              ? "5em"
-              : "3em"
+              : "2.5em"
           }
           width={
             innerWidth < 800 && innerWidth > 400
               ? "6.5em"
               : innerWidth <= 400
               ? "8em"
-              : innerWidth <= 1200
-              ? "5em"
-              : "3em"
+              : "2.5em"
           }
         />
       )}

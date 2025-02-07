@@ -16,7 +16,7 @@ function IconCancel(props) {
         innerWidth <= 400 ? "mb-10" : innerWidth < 800 ? "mb-14" : "mb-20"
       }`}
       animate={{ rotate: 180 }}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, duration: 0.45 }}
       onClick={() => modalCtx.handleMenuClick()}
     >

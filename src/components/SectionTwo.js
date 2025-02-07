@@ -41,7 +41,7 @@ export default function SectionTwo() {
       >
         <div className="flex flex-row text-base sm:text-xl md:text-2xl xl:text-3xl lp:text-2xl justify-center text-white relative gap-4 sm:gap-5 md:gap-6 lp:gap-1 mb-3">
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("infoTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.infoTab ? "bg-black" : "bg-green-500"
@@ -50,7 +50,7 @@ export default function SectionTwo() {
             My Info
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("goalTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.goalTab ? "bg-black" : "bg-green-500"
@@ -59,7 +59,7 @@ export default function SectionTwo() {
             My Goals
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("hobbiesTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
               tab.hobbiesTab ? "bg-black" : "bg-green-500"
@@ -68,14 +68,19 @@ export default function SectionTwo() {
             My Hobbies
           </motion.button>
         </div>
-        <div className="bg-slate-600 rounded-lg w-[100%] sm:w-[90%] md:w-[80%] lp:w-[50%] min-h-fit text-2xl lp:text-xl xl:text-3xl m-auto p-14 text-white">
+        <div
+          className={`bg-slate-600 rounded-lg 
+          w-[100%] sm:w-[90%] md:w-[80%] 2xl:w-[55%] lp:w-[50%] min-h-fit 
+          text-xl 
+           m-auto p-14 text-white`}
+        >
           {tab.infoTab && <TabInfo info="info" />}
           {tab.goalTab && <TabInfo info="goal" />}
           {tab.hobbiesTab && <TabInfo info="hobbies" />}
         </div>
         <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.2 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.1 }}
           transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
           href="mailTo: omfugo2006@gmail.com"
           className="m-auto mt-10 bg-green-500 rounded-lg text-white py-3 px-7 text-xl sm:text-2xl md:text-3xl xl:text-4xl lp:text-3xl"

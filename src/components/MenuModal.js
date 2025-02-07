@@ -25,9 +25,16 @@ export default function MenuModal({ modalOpen }) {
       exit={{ x: [2, 6, 1] }}
       ref={dialogRef}
       onKeyDown={handleClose}
-      className="w-screen flex flex-col items-center justify-center sm:py-36 lp:pt-0 lp:pb-16 p-16 min-h-screen text-white bg-gray-900  backdrop:bg-black backdrop:opacity-70 shadow-xl lp:w-[30%] lp:left-[70%] 2md:pb-10 "
+      className={`w-screen flex flex-col items-center justify-center 
+        sm:py-36 lp:pt-0 lp:pb-16 p-16 md:py-10 2md:pb-10
+        min-h-screen 
+        text-white bg-gray-900  
+        backdrop:bg-black backdrop:opacity-70 shadow-xl 
+        lp:w-[30%] lp:left-[70%] `}
     >
-      <IconCancel height="4.5em" width="4.5em" />
+      <div className="md:mt-16">
+        <IconCancel height="4.5em" width="4.5em" />
+      </div>
 
       <motion.ul
         initial={{ opacity: 0 }}
@@ -77,8 +84,8 @@ export default function MenuModal({ modalOpen }) {
           </button>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.2 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.1 }}
           transition={{ duration: 0.25, type: "spring", stiffness: 500 }}
         >
           <a

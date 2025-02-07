@@ -17,6 +17,8 @@ import photoshop from "./assets/images/photoshop.png";
 import ts from "./assets/images/TS.png";
 import reactImage from "./assets/images/React.png";
 import responsive from "./assets/images/responsive.png";
+import mui from "./assets/images/mui.png";
+import native from "./assets/images/native.png";
 
 function imageSwitch(imageUrl) {
   switch (imageUrl) {
@@ -60,6 +62,10 @@ function skillSwitch(skillImage) {
       return reactImage;
     case "images/responsive.png":
       return responsive;
+    case "images/mui.png":
+      return mui;
+    case "images/native.png":
+      return native;
     default:
       return photoshop;
   }
@@ -142,6 +148,16 @@ export const SKILLS_DATA = [
     name: "Framer Motion",
     image: skillSwitch("images/framer.png"),
     value: 85,
+  },
+  {
+    name: "Material UI",
+    image: skillSwitch("images/mui.png"),
+    value: 90,
+  },
+  {
+    name: "React Native",
+    image: skillSwitch("images/native.png"),
+    value: 90,
   },
   {
     name: "Next.js",

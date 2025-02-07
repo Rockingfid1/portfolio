@@ -10,7 +10,7 @@ export default function SectionThree() {
   return (
     <section
       ref={modalCtx.projectsRef}
-      className="w-screen h-fit page-color pb-20 pt-10"
+      className="w-screen h-fit page-color px-14 pb-20 pt-10"
     >
       <motion.p
         initial={{ opacity: 0 }}
@@ -21,7 +21,14 @@ export default function SectionThree() {
         Projects
       </motion.p>
       <motion.ul
-        className="grid grid-cols-1 gap-8 lp:grid-cols-2"
+        className={`grid
+          content-center
+          justify-items-center
+          grid-cols-1 
+          2md:grid-cols-2
+          gap-8 
+        2md:gap-14
+          `}
         variants={{
           visible: { transition: { staggerChildren: 0.05 } },
         }}

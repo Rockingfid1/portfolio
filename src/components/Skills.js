@@ -17,7 +17,17 @@ export default function SkillsPage() {
         Skills
       </motion.p>
 
-      <motion.ul className="grid grid-cols-1 lp:grid-cols-3 gap-8 max-w-fit m-auto p-5">
+      <motion.ul
+        className={`grid 
+          content-center
+          justify-items-center
+          grid-cols-1 
+          2md:grid-cols-2
+        2xl:grid-cols-3 
+        gap-10
+        2md:gap-20 w-[100%] 
+       p-5`}
+      >
         {SKILLS_DATA.map((skill) => (
           <Skill key={skill.name} {...skill} />
         ))}

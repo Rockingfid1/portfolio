@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 export default function GithubIcon() {
   return (
     <motion.svg
-      whileHover={{ scale: 1.2 }}
+      whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.25, stiffness: 500, type: "spring" }}
       width="2em"
       height="2em"
