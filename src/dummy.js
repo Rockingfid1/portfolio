@@ -71,7 +71,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/thspian.png"),
     name: "Thspian",
     description:
-      "A social media platform that allows content creators from all over the world to interact with eachother and share their content.",
+      "A social media platform that allows content creators from all over the world to interact with eachother, create job postings, hire talent, and share their content.",
   },
   {
     url: "https://forkify-michaelfrank.netlify.app/",
@@ -85,7 +85,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/food-order-app.png"),
     name: "React Food",
     description:
-      "An app that allows you to place food orders and send them to a backend to be processed using the fetch API. (Non-responsive)",
+      "An app that allows you to place food orders and send them to a backend to be processed. (Non-responsive)",
   },
   {
     url: "https://tic-tac-toe-app-michael.netlify.app/",
@@ -99,7 +99,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/reminder-app-logo.png"),
     name: "Project Reminder App",
     description:
-      "A passion project of mine that allows you to set deadlines and tasks for a team/individual. My second project created 100% by me. (Responsive)",
+      "An app that allows you to set deadlines and tasks individually or for a team. (Responsive)",
   },
   {
     url: "https://food-mpa.vercel.app/",
@@ -113,7 +113,7 @@ export const DUMMY_DATA = [
     image: imageSwitch("images/meetup-app.png"),
     name: "Meetup App",
     description:
-      "An app that allows you to retrieve hundreds of recipes from a backend and add personal recipes as well. (Non-responsive)",
+      "An app that allows you to add your favorite locations and retrieve them from a backend. (Non-responsive)",
   },
 ];
 
