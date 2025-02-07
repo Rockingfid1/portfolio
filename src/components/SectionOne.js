@@ -34,16 +34,11 @@ export default function SectionOne() {
         <Header />
 
         <motion.div
-          className="m-auto flex flex-col gap-3 2xl:flex-row lg:flex-col-reverse lg:p-20 md:gap-5 md:flex-col-reverse sm:flex-col-reverse sm:gap-5"
+          className="m-auto flex flex-col-reverse gap-3 2xl:flex-row lg:flex-col-reverse lg:p-20 md:gap-5 md:flex-col-reverse sm:flex-col-reverse sm:gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [1, 4, 1] }}
           transition={{ duration: 0.7 }}
         >
-          <img
-            src={devImage}
-            alt="developer"
-            className="m-auto w-[50%] lp:w-[35%]"
-          />
           <div className="text-white text-center m-auto flex flex-col gap-5 items-start lg:gap-10 lp:gap-8 xl:gap-12 p-4">
             <span>
               <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl  mb-1 sm:mb-2 md:mb-3 lg:mb-4 flex flex-row gap-2">
@@ -66,6 +61,12 @@ export default function SectionOne() {
               About Me
             </motion.button>
           </div>
+
+          <img
+            src={devImage}
+            alt="developer"
+            className="m-auto w-[50%] lp:w-[35%]"
+          />
         </motion.div>
       </section>
     </>
