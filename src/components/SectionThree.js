@@ -16,7 +16,7 @@ export default function SectionThree() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl md:text-5xl md:py-14 lp:text-4xl text-center pt-10 text-white font-medium"
+        className="text-4xl md:text-5xl py-14 lp:text-4xl text-center text-white font-medium"
       >
         Projects
       </motion.p>

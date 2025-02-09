@@ -10,7 +10,9 @@ export default function Project({ image, name, url, description }) {
          border-black rounded-lg 
          bg-zinc-800 
          w-[100%]
-         2md:w-[50%] 
+         xl:w-[80%]
+         2xl:w-[60%]
+
          text-white
           text-xl 
           sm:text-2xl 
