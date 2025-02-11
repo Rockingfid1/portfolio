@@ -12,11 +12,6 @@ export default function TabInfo({ info }) {
       Beyond coding, I stay active by playing sports, which fuels my teamwork
       and problem-solving mindset. I'm always eager to learn, adapt, and tackle
       new challenges in the tech world.
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </p>
   ) : info === "goal" ? (
     <p>
@@ -42,12 +37,6 @@ export default function TabInfo({ info }) {
       producing, and working out.
       <br />
       <br /> My favorite pastime is spent keeping myself active.
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </p>
   );
 }

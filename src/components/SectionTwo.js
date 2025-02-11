@@ -44,7 +44,7 @@ export default function SectionTwo() {
             whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("infoTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
-              tab.infoTab ? "bg-black" : "bg-green-500"
+              tab.infoTab ? "bg-green-700" : "bg-green-500"
             }`}
           >
             My Info
@@ -53,7 +53,7 @@ export default function SectionTwo() {
             whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("goalTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
-              tab.goalTab ? "bg-black" : "bg-green-500"
+              tab.goalTab ? "bg-green-700" : "bg-green-500"
             }`}
           >
             My Goals
@@ -62,16 +62,16 @@ export default function SectionTwo() {
             whileHover={{ scale: 1.05 }}
             onClick={() => handleButtonClick("hobbiesTab")}
             className={`shadow-sm shadow-black rounded-lg py-2 px-2 ${
-              tab.hobbiesTab ? "bg-black" : "bg-green-500"
+              tab.hobbiesTab ? "bg-green-700" : "bg-green-500"
             }`}
           >
             My Hobbies
           </motion.button>
         </div>
         <div
-          className={`bg-slate-600 rounded-lg 
-          w-[100%] sm:w-[90%] md:w-[80%] 2xl:w-[55%] lp:w-[50%] min-h-fit 
-          text-xl 
+          className={`bg-slate-600 rounded-lg min-h-[400px]
+          w-[100%] sm:w-[90%] md:w-[80%] 2xl:w-[55%] lp:w-[50%]
+          text-xl
            m-auto p-14 text-white`}
         >
           {tab.infoTab && <TabInfo info="info" />}
