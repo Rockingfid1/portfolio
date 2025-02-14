@@ -7,19 +7,22 @@ function IconMenu(props) {
   return (
     <motion.button
       className="text-white mr-2 h-fit w-fit m-auto"
-      animate={{ rotate: 180 }}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 400, duration: 0.4 }}
       onClick={() => modalCtx.handleMenuClick()}
     >
-      <motion.svg
-        viewBox="0 0 1024 1024"
-        fill="currentColor"
-        className="w-[100%] h-[100%]"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="1em"
+        height="1em"
         {...props}
       >
-        <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" />
-      </motion.svg>
+        <path
+          fill="currentColor"
+          d="M3 4h18v2H3zm0 7h18v2H3zm0 7h18v2H3z"
+        ></path>
+      </svg>
     </motion.button>
   );
 }

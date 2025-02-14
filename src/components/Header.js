@@ -10,12 +10,9 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
-
-    return () =>
-      window.removeEventListener("resize", () =>
-        setInnerWidth(window.innerWidth)
-      );
   }, []);
+
+  console.log(innerWidth);
 
   return (
     <motion.nav
@@ -27,7 +24,7 @@ export default function Header() {
       <span className="flex flex-row items-center gap-3">
         <motion.img
           src={logo}
-          className="w-[15%] 2xl:w-[10%] lp:w-[7%] md:w-[11%] shadow-black"
+          className="w-[50px] sm:w-[70px] 2md:w-[100px]   shadow-black"
           initial={{ rotate: "-12deg" }}
           whileHover={{ rotate: "55deg", scale: 1.05 }}
           transition={{ duration: 0.3 }}
@@ -37,7 +34,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-lg sm:text-xl text-white font-medium"
+            className="text-base sm:text-xl 2xl:text-2xl text-white font-medium"
           >
             Michaelfrank Okoye
           </motion.p>
@@ -46,20 +43,8 @@ export default function Header() {
 
       {!modalCtx.menuClick && (
         <IconMenu
-          height={
-            innerWidth < 800 && innerWidth > 400
-              ? "6.5em"
-              : innerWidth <= 400
-              ? "8em"
-              : "2.5em"
-          }
-          width={
-            innerWidth < 800 && innerWidth > 400
-              ? "6.5em"
-              : innerWidth <= 400
-              ? "8em"
-              : "2.5em"
-          }
+          height={innerWidth < 900 ? "2em" : "3em"}
+          width={innerWidth < 900 ? "2em" : "3em"}
         />
       )}
     </motion.nav>
