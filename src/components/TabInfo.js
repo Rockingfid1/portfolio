@@ -4,9 +4,9 @@ export default function TabInfo({ info }) {
       Hey there!
       <br />
       <br />
-      I'm a passionate software developer with hands-on experience from coding
-      camps and internships, where I've honed my skills in building efficient
-      and innovative solutions.
+      I'm a passionate software developer with hands-on experience from
+      companies, internships, and coding camps, where I've honed my skills in
+      building efficient and innovative solutions.
       <br />
       <br />
       Beyond coding, I stay active by playing sports, which fuels my teamwork
